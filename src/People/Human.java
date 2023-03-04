@@ -1,22 +1,17 @@
 package People;
 
-public abstract class Personal{
+public abstract class Human {
     private int age;
-    private int salary;
     private String firstName;
     private String lastName;
-    private String position;
     private final int id;
     private TakeID count = new TakeID();
 
-    public Personal(int age, int salary, String firstName, String lastName, String position) {
+    public Human(int age, String firstName, String lastName) {
         this.id = count.get();
         this.age = age;
-        this.salary = salary;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.position = position;
-
     }
 
     @Override
@@ -24,9 +19,10 @@ public abstract class Personal{
         return "ID: " + id +
                 ". Имя: " + firstName +
                 ". Фамилия: " + lastName +
-                ". Должность: " + position +
-                ". Возраст: " + age +
-                ". Зарплата: " + salary+"руб. ";
+                ". Возраст: " + age +".";
     }
 
+    public int getId() {
+        return id;
+    }
 }

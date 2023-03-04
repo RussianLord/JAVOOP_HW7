@@ -1,11 +1,11 @@
 package People;
 
-public class GeneralPersonal extends Personal{
+public class GeneralHuman extends UniStuff{
     public int parkNumber;
     public int privateCabinet;
 
-    public GeneralPersonal(int age, int salary, String firstName, String lastName, String position, int parkNumber, int privateCabinet) {
-        super(age, salary, firstName, lastName, position);
+    public GeneralHuman(int age, String firstName, String lastName, String position, int salary, int parkNumber, int privateCabinet) {
+        super(age, firstName, lastName, position, salary);
         this.parkNumber = parkNumber;
         this.privateCabinet = privateCabinet;
     }

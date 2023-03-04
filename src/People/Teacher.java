@@ -1,10 +1,10 @@
 package People;
 
-public class Teacher extends Personal{
+public class Teacher extends UniStuff{
     public String lesson;
 
-    public Teacher(int age, int salary, String firstName, String lastName, String position, String lesson) {
-        super(age, salary, firstName, lastName, position);
+    public Teacher(int age, String firstName, String lastName, String position, int salary, String lesson) {
+        super(age, firstName, lastName, position, salary);
         this.lesson = lesson;
     }
 
