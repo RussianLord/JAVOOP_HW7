@@ -7,11 +7,10 @@ public abstract class Personal{
     private String lastName;
     private String position;
     private final int id;
-    private static int count;
+    private TakeID count = new TakeID();
 
     public Personal(int age, int salary, String firstName, String lastName, String position) {
-        count++;
-        this.id = new GetID().get(count);
+        this.id = count.get();
         this.age = age;
         this.salary = salary;
         this.firstName = firstName;
@@ -30,7 +29,4 @@ public abstract class Personal{
                 ". Зарплата: " + salary+"руб. ";
     }
 
-    public int getCount() {
-        return count;
-    }
 }

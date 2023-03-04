@@ -29,8 +29,8 @@ public class GeneralPersonal extends Personal{
     @Override
     public String toString() {
         return super.toString()+
-                "№ Личного кабинета: " + privateCabinet +
-                ". № Парковочного места: " + parkNumber ;
+                "№ Личного кабинета: [" + privateCabinet +
+                "]. № Парковочного места: [" + parkNumber +"]." ;
 
     }
 }
