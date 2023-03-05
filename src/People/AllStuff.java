@@ -2,9 +2,11 @@ package People;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class AllStuff{
-    List<UniStuff> humanList = new ArrayList<>();
+    private List<UniStuff> humanList = new ArrayList<>();
+    private Random random = new Random();
     public void addPersonal(UniStuff human){
         humanList.add(human);
     }
@@ -17,6 +19,9 @@ public class AllStuff{
         for (UniStuff it: humanList) {
             System.out.println(it);
         }
+    }
+    public String getOneStuff(){
+        return String.valueOf(humanList.get(random.nextInt(humanList.size())));
     }
 
 }
